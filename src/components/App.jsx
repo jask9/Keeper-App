@@ -22,7 +22,8 @@ function App() {
     .catch(err => {
       console.log(err);
     });
-  });
+  }, []); 
+  // useEffect had no [] to stop infinite loop, so added them
 
   
 
@@ -45,7 +46,7 @@ function App() {
         return (
           <Note
             key={index}
-            id={index}
+            id={noteItem._id}
             title={noteItem.title}
             content={noteItem.content}
             onDelete={deleteNote}
