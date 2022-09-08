@@ -34,6 +34,7 @@ function App() {
         return index !== id;
       });
     });
+    window.location="/notes";
   }
 
   return (

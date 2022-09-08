@@ -34,6 +34,7 @@ function CreateArea(props) {
     axios.post("http://localhost:5000/notes/", note)
     .then(res => console.log(res.data))
     .catch((err)=>console.log(err));
+    window.location="/notes";
 
     setNote({
       title: "",
